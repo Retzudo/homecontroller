@@ -1,7 +1,7 @@
 (function() {
 	var app = angular.module('HomeController', []);
 
-	app.controller('MainController', function($scope, $http, computerList, booter) {
+	app.controller('MainController', function($scope, computerList, booter) {
 		computerList.getComputers().success(function(data) {
 			$scope.computers = data;
 		});
