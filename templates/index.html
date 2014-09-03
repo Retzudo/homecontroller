@@ -1,0 +1,13 @@
+{% extends 'master.html' %}
+{% block content %}
+<div class="container" data-ng-app="HomeController" data-ng-controller="MainController">
+	<h1>Boot PC</h1>
+	<div class="row" data-ng-cloak>
+		<div class="col-xs-6 col-lg-2" data-ng-repeat="(name,mac) in computers">
+			{% raw %}
+			<a href="#" class="btn btn-success" data-ng-click="boot(name)"><i class="glyphicon glyphicon-arrow-up"></i> {{ name }}</a>
+			{% endraw %}
+		</div>
+	</div>
+</div>
+{% endblock %}
